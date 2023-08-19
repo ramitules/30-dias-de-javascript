@@ -13,7 +13,7 @@ Symbol (valor unico generado por el constructor Symbol)
 Objetos
 Vectores
 */
-
+/*
 //Los tipos de datos primitivos no se pueden modificar (inmutables)
 let palabra = 'Javascript'
 palabra[0] = 'Y'
@@ -206,4 +206,80 @@ let numerito2_float_3 = +numerito2
 //FLOAT a INT
 let numerito3 = 9.81
 let numerito3_int = parseInt(numerito3) //Unica forma
+*/
+//EJERCICIOS
 
+//1. Declare a variable named challenge and assign it to an initial value '30 Days Of JavaScript'.
+let challenge = '30 Days of JavaScript'
+console.log(challenge)
+console.log(challenge.length)
+console.log(challenge.toUpperCase())
+console.log(challenge.toLowerCase())
+console.log(challenge.substring(0, 1))
+console.log(challenge.slice(0, 2))
+console.log(challenge.includes('Script'))
+console.log(challenge.split(' '))
+
+let empresas = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
+console.log(empresas.split(', '))
+
+//console.log(challenge.replace('JavaScript', 'Python'))
+console.log(challenge.charAt(15))
+console.log(challenge.charCodeAt(challenge.indexOf('J')))
+console.log(challenge.indexOf('a'))
+console.log(challenge.lastIndexOf('a'))
+
+let oracion = 'You cannot end a sentence with because because because is a conjunction'
+console.log(oracion.indexOf('because'))
+console.log(oracion.lastIndexOf('because'))
+console.log(oracion.search('because'))
+
+console.log(challenge.startsWith('30'))
+console.log(challenge.endsWith('t'))
+console.log(challenge.match(/a/gi))
+
+let rep = challenge.concat(' or maybe more')
+console.log(rep)
+console.log(rep.repeat(2))
+
+//Nivel 2
+console.log("The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.")
+console.log("Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.")
+
+let numero = '10'
+console.log(typeof (numero))
+console.log(+numero)
+
+let flotante = parseFloat('9.8')
+console.log(typeof (flotante))
+console.log(Math.round(flotante))
+
+console.log('jargon'.includes('on'))
+console.log('python'.includes('on'))
+
+console.log(Math.round(Math.random() * 100))
+console.log(50 + (Math.round(Math.random() * 50)))
+console.log(Math.round(Math.random() * 255))
+
+console.log('JavaScript'.charAt(Math.round(Math.random() * 'JavaScript'.length)))
+
+console.log(1, 1, 1, 1, 1)
+console.log(2, Math.pow(2, 0), Math.pow(2, 1), Math.pow(2, 2), Math.pow(2, 3))
+console.log(3, Math.pow(3, 0), Math.pow(3, 1), Math.pow(3, 2), Math.pow(3, 3))
+console.log(4, Math.pow(4, 0), Math.pow(4, 1), Math.pow(4, 2), Math.pow(4, 3))
+console.log(5, Math.pow(5, 0), Math.pow(5, 1), Math.pow(5, 2), Math.pow(5, 3))
+
+let substring = oracion.substr(oracion.indexOf('because'), ('because'.length * 3 + 2))
+console.log(substring)
+
+let oracion2 = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
+console.log(oracion2.match(/love/gi).length)
+
+const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+console.log(sentence.replace(/[^a-zA-Z0-9_.\s,?]/gi, ''))
+
+let ganancias = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+let numeros = ganancias.match(/\d+/gi)
+let month = +numeros[0] + +numeros[2]
+let year = (month * 12) + +numeros[1]
+console.log(year)
