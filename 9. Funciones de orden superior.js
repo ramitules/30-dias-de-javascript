@@ -53,6 +53,7 @@ console.log(sum)
 
 const paises = ['Argentina', 'Brasil', 'Colombia', 'España']
 paises.forEach(pais => console.log(pais.toUpperCase()))
+console.log(paises)
 
 //map: Itera un vector. Aplica la funcion a cada item y devuelve un nuevo vector
 const vectorModificado = numeros.map(num => num ** 2) //Cuadrado
